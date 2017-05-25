@@ -33,7 +33,7 @@ class Button extends Component {
 
     render() {
         return (
-            <div onClick={this.props.onClick} className=`button ${this.props.variant}`>{this.getText()}</div>
+            <div onClick={this.props.onClick} className={`button ${this.props.variant}`}>{this.getText()}</div>
         );
     }
 }

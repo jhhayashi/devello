@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
+
 import './Card.css';
 import Button from '../Button'
 
 export default class Card extends Component {
     static propTypes = {
         text: PropTypes.string.isRequired,
-        id: PropTypes.int.isRequired,
+        id: PropTypes.string.isRequired,
         moveForward: PropTypes.func.isRequired,
         moveBackward: PropTypes.func.isRequired,
         delete: PropTypes.func.isRequired,

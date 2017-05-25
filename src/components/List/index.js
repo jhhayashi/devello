@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../Card/';
 import './list.css';
 
-export defualt class List extends React.Component {
+export default class List extends React.Component {
     static propTypes = { id: React.PropTypes.string.isRequired,
                          cards: React.PropTypes.array.isRequired};
     static defaultProps = { cards: [] };

@@ -1,8 +1,5 @@
 import React from 'react'
-import App from './App'
-import List from './list'
-import Card from './card'
-import Button from './Button'
+import List from '../List'
 
 /**
 ~~~~~~~~~~~ List Structure ~~~~~~~~~~~
@@ -25,14 +22,14 @@ export default class Board extends React.Component {
     }
 
     render() {
-        return (
+      return (
+        <div>
             <h1> {this.props.name} </h1>
             <div className='board-wrap'>
-                this.state.list.map((el) => (
-                    <List title={el.title} cards={el.cards} />
-                ))
+              {this.state.list.map(el => <List title={el.title} cards={el.cards} />)}
             </div>
-        )
+        </div>
+      )
     }
 
     move = (id, dir) => {
@@ -45,7 +42,7 @@ export default class Board extends React.Component {
                 return false
             }
             return true
-        })
+        }))
         if (!index)
             throw new Error('No card with that ID');
         if (index < 0 || index >= this.state.list.length)
@@ -62,12 +59,12 @@ export default class Board extends React.Component {
 
     addFunctions() {
         const newState = this.state.list.map(l => {
-            l.map((el) =>
-                el.moveForward = moveForward.bind(null, el.id)
-                el.moveBackward = backForward.bind(null, el.id)
-                el.delete = deleteCard.bind(null, el.id)
-            ))
-        }
+            l.map((el) => {
+                el.moveForward = this.moveForward.bind(null, el.id)
+                el.moveBackward = this.backForward.bind(null, el.id)
+                el.delete = this.deleteCard.bind(null, el.id)
+            })
+        })
         this.setState(newState)
     }
 

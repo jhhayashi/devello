@@ -6,7 +6,7 @@ class Button extends Component {
     static propTypes = {
         text: PropTypes.string.isRequired,
         onClick: PropTypes.func.isRequired,
-        variant: PropTypes.oneOf(['default', 'forward', 'backward', 'delete', 'create'])
+        variant: PropTypes.oneOf(['default', 'forward', 'backward', 'delete', 'create']).isRequired
     }
 
     static defaultProps = {
@@ -18,7 +18,7 @@ class Button extends Component {
     getText = () => {
         switch(this.props.variant) {
             case 'default':
-                return this.props.text;
+                return '&#10003;';
             case 'forward':
                 return '&#8594;';
             case 'backward':
@@ -33,9 +33,7 @@ class Button extends Component {
 
     render() {
         return (
-            <div className="Button">
-                <button onClick={this.props.onClick} className=`button ${this.props.variant}`>{this.getText()}</button>
-            </div>
+            <div onClick={this.props.onClick} className=`button ${this.props.variant}`>{this.getText()}</div>
         );
     }
 }

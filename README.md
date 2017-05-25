@@ -53,6 +53,7 @@ Click to move cards through lists
 #### props
   - text
   - onClick
+  - variant: PropTypes.oneOf(['default', 'forward', 'backward', 'delete', 'create'])
 
 ## Available Scripts
 

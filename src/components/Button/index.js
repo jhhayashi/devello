@@ -20,20 +20,20 @@ class Button extends Component {
             case 'default':
                 return '&#10003;';
             case 'forward':
-                return '&#8594;';
+                return '→';
             case 'backward':
-                return '&#8592;';
+                return '←';
             case 'delete':
-                return '&#128169;';
+                return 'X';
             case 'create':
             default:
-                return '&#43;';
+                return 'hi';
         }
     }
 
     render() {
         return (
-            <div onClick={this.props.onClick} className=`button ${this.props.variant}`>{this.getText()}</div>
+            <div onClick={this.props.onClick} className={`button ${this.props.variant}`}>{this.getText()}</div>
         );
     }
 }

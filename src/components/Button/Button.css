@@ -1,0 +1,52 @@
+.button {
+    padding: 5px;
+    border-radius: 5px;
+    width: 20px;
+    font-size: 10px;
+    color: #ffffff;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.default {
+    background-color: #898989;
+}
+
+.default:hover {
+    background-color: #898989;
+}
+
+.forward {
+    background-color: #34ff1a;
+}
+
+.forward:hover {
+    background-color: #339b24;
+}
+
+.backward {
+    background-color: #ff6600;
+}
+
+.backward:hover {
+    background-color: #9b4700;
+}
+
+.delete {
+    background-color: #ff0300;
+}
+
+.delete:hover {
+    background-color: #9b0200;
+}
+
+.create {
+    background-color: #34ff1a;
+}
+
+.create:hover {
+    background-color: #1b9b0d;
+}
